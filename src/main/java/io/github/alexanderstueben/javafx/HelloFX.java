@@ -9,27 +9,36 @@ import javafx.stage.Stage;
 public class HelloFX extends Application {
 
     Scene scene;
+    Stage stage;
 
     @Override
     public void start(Stage stage) {
-        Button button = new Button("Click me");
-        button.setOnAction(event -> {
-            boolean result = ConfirmBox.display("Close me", "Could you please close me?");
-            System.out.println(result);
+        this.stage = stage;
+        this.stage.setOnCloseRequest(event -> {
+            event.consume();
+            closeProgram();
         });
+
+        Button button = new Button("Close program");
+        button.setOnAction(event -> closeProgram());
 
         StackPane layout = new StackPane();
         layout.getChildren().add(button);
 
-        scene = new Scene(layout, 640,360);
+        scene = new Scene(layout, 300,250);
 
-        stage.setScene(scene);
-        stage.setTitle("Scenes");
-        stage.show();
+        this.stage.setScene(scene);
+        this.stage.setTitle("Scenes");
+        this.stage.show();
+    }
+
+    private void closeProgram() {
+        boolean answer = ConfirmBox.display("Close", "You want to exit?");
+        if (answer)
+            this.stage.close();
     }
 
     public static void main(String[] args) {
         launch(args);
     }
-
 }
