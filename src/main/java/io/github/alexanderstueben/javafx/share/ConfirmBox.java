@@ -1,4 +1,4 @@
-package io.github.alexanderstueben.javafx;
+package io.github.alexanderstueben.javafx.share;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;

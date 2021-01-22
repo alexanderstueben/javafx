@@ -25,4 +25,4 @@ test {
     useJUnitPlatform()
 }
 
-mainClassName = 'io.github.alexanderstueben.javafx.HelloFX'
+mainClassName = 'io.github.alexanderstueben.javafx.Main'

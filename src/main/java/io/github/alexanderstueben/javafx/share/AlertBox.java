@@ -1,4 +1,4 @@
-package io.github.alexanderstueben.javafx;
+package io.github.alexanderstueben.javafx.share;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -25,7 +25,7 @@ public class AlertBox {
 
         VBox layout = new VBox(10, label, button);
         layout.setAlignment(Pos.CENTER);
-        layout.setPadding(new Insets(10, 10, 10, 10));
+        layout.setPadding(new Insets(10));
 
         Scene scene = new Scene(layout);
         stage.setScene(scene);
