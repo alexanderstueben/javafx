@@ -3,11 +3,12 @@ package io.github.alexanderstueben.javafx;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class ChoiceBox extends Application {
+public class ChoiceBoxes extends Application {
 
     public static void main(String[] args) {
         launch(args);
@@ -17,7 +18,7 @@ public class ChoiceBox extends Application {
     public void start(Stage stage) {
         stage.setTitle("Choice Box");
 
-        javafx.scene.control.ChoiceBox<String> choiceBox = new javafx.scene.control.ChoiceBox<>();
+        ChoiceBox<String> choiceBox = new ChoiceBox<>();
         choiceBox.getItems().addAll("Apples", "Bananas", "Bacon", "Ham", "Meatballs");
         choiceBox.setValue("Apples");
 
